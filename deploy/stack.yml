@@ -286,12 +286,12 @@ Resources:
     Properties: 
       Code:
         S3Bucket: 'codedeploydemobkt'
-        S3Key: 'node-hello-master.zip'
+        S3Key: 'Codepipeline-master.zip'
       FunctionName: 'codepipeline_http_test'
       Handler: 'index.handler'
       MemorySize: 128
       Role: !Sub '${LambdaIAMRole.Arn}'
-      Runtime: 'nodejs4.3'
+      Runtime: 'nodejs10.x'
       Timeout: 30
 Outputs:
   URL:
